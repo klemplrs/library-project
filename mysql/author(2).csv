@@ -1,0 +1,10 @@
+[{"author_id":1, "name":"Chinua Achebe", "country":"Nigeria"},
+ {"author_id":2, "name":"Jane Austen", "country":"United Kingdom"},
+ {"author_id":3, "name":"Honor\u00e9 de Balzac", "country":"France"},
+ {"author_id":4, "name":"Samuel Beckett", "country":"Ireland"},
+ {"author_id":5, "name":"Emily Bront\u00eb", "country":"United Kingdom"},
+ {"author_id":6, "name":"Miguel de Cerventes", "country":"Spain"},
+ {"author_id":7, "name":"Charles Dickens", "country":"United Kingdom"},
+ {"author_id":8, "name":"Fiodor Dosto\u00efevski", "country":"Russian Empire"},
+ {"author_id":9, "name":"William Faulkner", "country":"United States of America"},
+ {"author_id":10, "name":"Gabriel Garc\u00eda M\u00e1rquez", "country":"Colombia"}]

@@ -77,7 +77,7 @@ try {
                                     <option value="" selected>-- Choose your Author: --</option> 
 
                                     <!-- manual entries -->
-                                    <option value="Chinua Achebe">Chinua Achebe</option> 
+                                    <!-- <option value="Chinua Achebe">Chinua Achebe</option> 
                                     <option value="Jane Austen">Jane Austen</option> 
                                     <option value="Honoré de Balzac">Honoré de Balzac</option> 
                                     <option value="Samuel Beckett">Samuel Beckett</option> 
@@ -86,7 +86,22 @@ try {
                                     <option value="Charles Dickens">Charles Dickens</option> 
                                     <option value="Fiodor Dostoïevski">Fiodor Dostoïevski</option> 
                                     <option value="William Faulkner">William Faulkner</option> 
-                                    <option value="Gabriel García Márquez">Gabriel García Márquez</option> 
+                                    <option value="Gabriel García Márquez">Gabriel García Márquez</option>  -->
+
+                                    <!-- SELECT id, name FROM author ORDER BY name ASC -->
+                                    <?php 
+                                    $objetPDO = new PDO("mysql:host=localhost;dbname=mylibrary","root","");
+                                    $sql = $objetPDO->query('SELECT author_id, name FROM author ORDER BY name ASC');
+                                                    
+                                    while ($data = $sql->fetch())
+                                        {
+                                    ?>     
+                                    
+                                    <option value= "<?php echo $data['author_id']?>"><?php echo $data['name']?></option> 
+                                        
+                                    <?php
+                                        } 
+                                    ?>
                                     
                                 </select>
 

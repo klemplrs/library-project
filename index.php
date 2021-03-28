@@ -59,15 +59,17 @@ try {
                     <div class="upperPart">
                         <h2>Book List</h2>
 
-                        <button id="modal-btn" class="modal-btn">Add a New Book</button>
+                        <button id="btnModal" class="btnModal">Add a New Book</button>
                     </div> 
 
-                    <div id="modal_bg" class="modal_bg">
+                    <div id="modal_content" class="modal_content">
 
                         <div id="modal" class="modal">
-                            <h3>New Book</h3>
+                            <div>
+                                <h3 class="modalTitle">New Book</h3>
 
-                            <span class="modal-close">&times;</span>
+                                <span id="btnClose">&times;</span>
+                            </div>
 
                             <form action="index.php" method="POST">
                                 <label for="title">Title: </label>
@@ -156,9 +158,6 @@ try {
                                     <td><?= $row['price']. " €"?></td>
                                     <td>
                                         <a href="remove.php?idd=<?= $row["id"]?>">Remove</a>
-                                    </td>
-                                    <td>
-                                        <a href="save.php?idd=<?= $row["id"] ?>">Modify</a>
                                     </td>
                                 </tr>
 

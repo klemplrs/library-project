@@ -82,7 +82,7 @@ header .frame {
 /* –––––– MODAL BOX –––––– */
 /* ––––––––––––––––––––––– */
 
-#modal-btn {
+.btnModal {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: white;
@@ -94,7 +94,7 @@ header .frame {
     cursor: pointer;
 }
 
-#modal_bg {
+.modal_content {
     position: fixed;
     background-color: rgba(0, 0, 0, .5);
     width: 100%;
@@ -106,20 +106,14 @@ header .frame {
     justify-content: center;
     align-items: center;
     transition: 0s, 0.5s;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden; */
 }
 
-/* .bg-active {
-    visibility: visible;
-    opacity: 1;
-} */
-
-#modal {
+.modal {
     position: relative;
     background-color: white;
     width: 50%;
-    height: 50%;
+    height: 75%;
 
     display: flex;
     justify-content: center;
@@ -133,6 +127,7 @@ form {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    margin-top: 10%;
 }
 
 .modal button {
@@ -147,8 +142,8 @@ form {
 
 .modal span {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 25px;
     font-size: xx-large;
     cursor: pointer;
 }
@@ -156,8 +151,18 @@ form {
 .modal h3 {
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 25px;
     font-size: x-large;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+
+select {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
 }
 
 

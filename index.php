@@ -9,7 +9,7 @@ $password = '';
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    echo "Successfully connected to $dbname on $host.";
+    // echo "Successfully connected to $dbname on $host.";
 
 } catch (PDOException $e) {
     
@@ -127,7 +127,7 @@ try {
 
                     <table>
 
-                        <thead>
+                    <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Title</th>
@@ -136,6 +136,31 @@ try {
                                 <th>Publication Date</th>
                                 <th>Price</th>
                             </tr>
+
+                            <?php
+                            $objetPDO = new PDO("mysql:host=localhost;dbname=mylibrary","root","");
+
+                            $sql = 'SELECT id, title, name, country, publication_date, price FROM book LEFT JOIN author ON book.author_id = author.author_id';
+                            
+                            foreach ($objetPDO->query($sql) as $row) 
+                                { 
+                            ?>
+                                <tr>
+                                    <td><?= $row['id']?></td>
+                                    <td><?= $row['title']?></td>
+                                    <td><?= $row['name']?></td>
+                                    <td><?= $row['country']?></td>
+                                    <td><?= $row['publication_date']?></td>
+                                    <td><?= $row['price']. " €"?></td>
+                                    <td>
+                                        <a href="remove.php?idd=<?= $row["id"]?>">Remove</a>
+                                    </td>
+                                </tr>
+
+                            <?php
+                                }
+                            ?>
+
                         </thead>
 
                     </table>

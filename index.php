@@ -142,3 +142,26 @@ try {
     </body>
 
 </html>
+
+<?php
+
+/* ––––– FORM // SUBMIT TO BDD ––––– */
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (empty($_POST['title']) || empty($_POST['author_id']) || empty($_POST['price']) || empty($_POST['publication_date']) || empty($_POST['pages_number'])) {
+        // echo "Thank you to fill out all the fields";
+    
+    } else {
+        $title = $_POST['title'];
+        $author_id = $_POST['author_id'];
+        $price = $_POST['price'];
+        $publication_date = $_POST['publication_date'];
+        $pages_number = $_POST['pages_number'];
+
+        $objetPDO = new PDO("mysql:host=localhost;dbname=mylibrary","root","");
+
+        $sql = $objetPDO->prepare("INSERT INTO book (title, author_id, price, publication_date, pages_number) VALUES (:title, :author_id, :price, :publication_date, :pages_number)");
+        $sql->execute(array(':title' => $title, ':author_id' => $author_id, ':price' => $price, ':publication_date' => $publication_date, ':pages_number' => $pages_number));
+    }
+}

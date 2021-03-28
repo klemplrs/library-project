@@ -27,6 +27,8 @@ try {
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+        <link rel="icon" href="/images/books.ico"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
         <link rel="stylesheet" href="/css/styles.css"/>
 
         <script src="index.js"></script>
@@ -36,15 +38,15 @@ try {
     <body>
 
         <header>
-            <div>
+            <div class="frame">
                 <img src="/images/Image.jpg" alt="Logo" width="6.75%"/>
 
                 <h1>My Virtual Library</h1>
 
-                <a href="wwww.google.com">Help ?</a>
+                <a href="">Help ?</a>
             </div>
 
-            <div>
+            <div class="bg-image header-bg-image">
                 <h2>Here, find a way to escape your life, and dive into a whole new universe</h2>
             </div>
         </header>
@@ -54,18 +56,18 @@ try {
             <section>
 
                 <div>
-                    <div>
+                    <div class="upperPart">
                         <h2>Book List</h2>
 
-                        <button>Add a New Book</button>
+                        <button id="modal-btn" class="modal-btn">Add a New Book</button>
                     </div> 
 
-                    <div>
+                    <div id="modal_bg" class="modal_bg">
 
-                        <div>
+                        <div id="modal" class="modal">
                             <h3>New Book</h3>
 
-                            <span>&times;</span>
+                            <span class="modal-close">&times;</span>
 
                             <form action="index.php" method="POST">
                                 <label for="title">Title: </label>
@@ -109,7 +111,7 @@ try {
                                 <input type="number" id="price" name="price" min="0" step=".01" placeholder="23.00"/>
 
                                 <label for="publication_date"> Publication Date: </label>
-                                <input type="number" id="publication_date" name="publication_date" maxlength="4" placeholder="2008" required/>
+                                <input type="number" id="publication_date" name="publication_date" maxlength="4" placeholder="2008"/>
 
                                 <label for="pages_number">Pages: </label>
                                 <input type="number" id="pages_number" name="pages_number" min="0" placeholder="432"/>
@@ -127,7 +129,7 @@ try {
 
                     <table>
 
-                    <thead>
+                        <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Title</th>
@@ -155,6 +157,9 @@ try {
                                     <td>
                                         <a href="remove.php?idd=<?= $row["id"]?>">Remove</a>
                                     </td>
+                                    <td>
+                                        <a href="save.php?idd=<?= $row["id"] ?>">Modify</a>
+                                    </td>
                                 </tr>
 
                             <?php
@@ -173,7 +178,7 @@ try {
 
         <footer>
 
-            <div>
+            <div class="bg-image footer-bg-image">
                 <h2>Come back to see us soon !</h2>
             </div>
 
@@ -182,6 +187,7 @@ try {
     </body>
 
 </html>
+
 
 <?php
 

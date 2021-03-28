@@ -1,0 +1,13 @@
+[{"id":1, "title":"Molloy", "author_id":4, "price":8.5, "publication_date":1951, "pages_number":298},
+ {"id":2, "title":"Things Fall Apart", "author_id":1, "price":7.7, "publication_date":1958, "pages_number":224},
+ {"id":3, "title":"Crime and Punishment", "author_id":8, "price":8.0, "publication_date":1866, "pages_number":928},
+ {"id":4, "title":"The Brothers Karamazov", "author_id":8, "price":8.9, "publication_date":1880, "pages_number":992},
+ {"id":5, "title":"Wuthering Heights", "author_id":5, "price":5.6, "publication_date":1847, "pages_number":427},
+ {"id":6, "title":"Don Quichotte, Tome 1", "author_id":6, "price":9.35, "publication_date":1605, "pages_number":704},
+ {"id":7, "title":"Don Quichotte, Tome 2", "author_id":6, "price":9.35, "publication_date":1615, "pages_number":736},
+ {"id":8, "title":"Pride and Prejudice", "author_id":2, "price":7.55, "publication_date":1813, "pages_number":512},
+ {"id":9, "title":"P\u00e8re Goriot", "author_id":3, "price":7.35, "publication_date":1835, "pages_number":445},
+ {"id":10, "title":"Great Expectations", "author_id":7, "price":7.8, "publication_date":1861, "pages_number":752},
+ {"id":11, "title":"As I Lay Dying", "author_id":9, "price":7.25, "publication_date":1930, "pages_number":256},
+ {"id":12, "title":"One Hundred Years of Solitude", "author_id":10, "price":6.8, "publication_date":1967, "pages_number":480},
+ {"id":13, "title":"Emma", "author_id":2, "price":7.6, "publication_date":1815, "pages_number":482}]

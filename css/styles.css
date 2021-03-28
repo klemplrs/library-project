@@ -110,6 +110,11 @@ header .frame {
     opacity: 0;
 }
 
+/* .bg-active {
+    visibility: visible;
+    opacity: 1;
+} */
+
 #modal {
     position: relative;
     background-color: white;

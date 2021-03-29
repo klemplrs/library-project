@@ -2,43 +2,44 @@
 //–––––––––– MODAL ––––––––––//
 //–––––––––––––––––––––––––––//
 
-var btnModal = document.getElementById('btnModal');
+window.onload = function() {
+    var btnModal = document.getElementById('btnModal');
 
-var modal_content = document.getElementById('modal_content');
+    var modal_content = document.getElementById('modal_content');
 
-var btnClose = document.getElementById('btnClose');
+    var btnClose = document.getElementById('btnClose');
 
-function openModal(){
-    modal_content.style.display = 'block';
-}
+    function openModal(){
+        modal_content.style.display = 'flex';
+    }
 
-btnModal.addEventListener('click',openModal);
+    btnModal.addEventListener('click',openModal);
 
-function closeModal(){
-    modal_content.style.display = 'none';
-}
+    function closeModal(){
+        modal_content.style.display = 'none';
+    }
 
-btnClose.addEventListener('click',closeModal);
+    btnClose.addEventListener('click',closeModal);
+};
 
 
 
+// var modal_content = document.getElementById("modal_content");
 
-// var modalBg = document.getElementById("modal_bg");
+// var btnModal = document.getElementById("btnModal");
 
-// var modalBtn = document.getElementById("modal-btn");
+// var btnClose = document.getElementById("btnClose");
 
-// var modalClose = document.getElementsByClassName("modal-close")[0];
-
-// modalBtn.onclick = function() {
-//     modalBg.style.display = "block";
+// btnModal.onclick = function() {
+//     modal_content.style.display = "block";
 // }
 
-// modalClose.onclick = function() {
-//     modalBg.style.display = "none";
+// btnClose.onclick = function() {
+//     modal_content.style.display = "none";
 // }
 
 // window.onclick = function(event) {
-//     if (event.target == modalBg) {
-//         modalBg.style.display = "none";
+//     if (event.target == modal_content) {
+//         modal_content.style.display = "none";
 //     }
 // } 

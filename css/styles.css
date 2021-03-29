@@ -102,11 +102,10 @@ header .frame {
     top: 0;
     left: 0;
 
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: 0s, 0.5s;
-    /* visibility: hidden; */
+    display: none;
 }
 
 .modal {
